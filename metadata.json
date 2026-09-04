@@ -1,0 +1,6 @@
+{
+  "name": "Transporte e Mapas",
+  "description": "Aplicativo em Java com consulta aos horários de ônibus Jotur e Consórcio Fênix e mapa regional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

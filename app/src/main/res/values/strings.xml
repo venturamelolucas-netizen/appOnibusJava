@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Transporte e Mapas</string>
+    <string name="tab_inicio">Início</string>
+    <string name="tab_mapas">Mapas</string>
+    <string name="btn_jotur">Jotur</string>
+    <string name="btn_fenix">Fênix</string>
+    <string name="map_title">Visualize o mapa da sua região</string>
+    <string name="map_pin_description">Alfinete de mapa para abrir localização regional</string>
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cinza_fundo"
+    android:fitsSystemWindows="true">
+
+    <!-- Top TabLayout for navigation between Início and Mapas -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:tabIndicatorColor="@color/azul"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="@color/azul"
+        app:tabTextColor="@color/cinza_claro"
+        app:tabIconTint="@color/azul">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_inicio_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_tab_home"
+            android:text="@string/tab_inicio" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_mapas_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_tab_map"
+            android:text="@string/tab_mapas" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Main Container switching between Tabs -->
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ABA INÍCIO -->
+        <LinearLayout
+            android:id="@+id/tab_inicio_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="visible">
+
+            <!-- Botão 1: Jotur (Verde Claro, cantos arredondados, centralizado) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botao1"
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:text="@string/btn_jotur"
+                android:textColor="@color/verde_texto"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/verde_claro"
+                app:cornerRadius="30dp"
+                app:elevation="4dp"
+                android:contentDescription="@string/btn_jotur" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <!-- Botão 2: Fênix (Azul, cantos arredondados, centralizado) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botao2"
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:text="@string/btn_fenix"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/azul"
+                app:cornerRadius="30dp"
+                app:elevation="4dp"
+                android:contentDescription="@string/btn_fenix" />
+        </LinearLayout>
+
+        <!-- ABA MAPAS -->
+        <RelativeLayout
+            android:id="@+id/tab_mapas_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <!-- Frase no topo, centralizada, em cor cinza claro -->
+            <TextView
+                android:id="@+id/tv_map_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/map_title"
+                android:textColor="@color/cinza_claro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Botão centralizado com formato de alfinete de mapa, na cor roxa -->
+            <ImageButton
+                android:id="@+id/btn_map_pin"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_map_pin"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/map_pin_description"
+                android:padding="8dp" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde_claro">#81C784</color>
+    <color name="verde_claro_dark">#66BB6A</color>
+    <color name="verde_texto">#143D17</color>
+    <color name="azul">#1976D2</color>
+    <color name="azul_dark">#1565C0</color>
+    <color name="roxa">#8E24AA</color>
+    <color name="roxa_light">#AB47BC</color>
+    <color name="roxa_dark">#7B1FA2</color>
+    <color name="cinza_claro">#8E8E93</color>
+    <color name="cinza_fundo">#F5F6F8</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
